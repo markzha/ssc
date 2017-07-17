@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ll_bg_black_red"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="5dp"
+        android:background="@drawable/ll_bg_black_divide"
+        android:orientation="vertical"
+        android:padding="0.5dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="13"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/tv_showTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp5" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp45"
+                    android:layout_height="@dimen/dp45"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/title"
+                    android:src="@drawable/nankai" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="南凯自动化移动终端"
+                    android:textSize="@dimen/dp25" />
+
+                <Button
+                    android:id="@+id/btn_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp5"
+                    android:background="@drawable/btn_set_selector"
+                    android:padding="@dimen/dp10"
+                    android:text="设置"
+                    android:textColor="@color/blue" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="6" >
+
+                <View style="@style/devideline_h" />
+
+                <!-- listview的表头行 -->
+
+                <LinearLayout
+                    android:id="@+id/grid_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dp30"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <View style="@style/devideline_o" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="序号" />
+
+                    <View style="@style/devideline_o" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="设备编号" />
+
+                    <View style="@style/devideline_o" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:text="设备名称" />
+
+                    <View style="@style/devideline_o" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="运行情况" />
+
+                    <View style="@style/devideline_o" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:text="运行信息" />
+
+                    <View style="@style/devideline_o" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divide2"
+                    style="@style/devideline_h"
+                    android:layout_below="@+id/grid_title" />
+
+                <ListView
+                    android:id="@+id/lv_bb"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/divide2" >
+                </ListView>
+
+                <View
+                    style="@style/devideline_h"
+                    android:layout_below="@+id/lv_bb" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View style="@style/devideline_h" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="状态栏" />
+
+            <TextView
+                android:id="@+id/tv_ipOrError"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:gravity="left"
+                android:text="IP地址/故障信息"
+                android:textColor="@color/red" 
+                android:singleLine="false"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

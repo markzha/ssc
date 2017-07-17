@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ll_bg_black_red"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/ll_bg_black_divide"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white">
+            
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="确定切换通讯管理机"
+                android:textSize="@dimen/dp15"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white" 
+            android:gravity="center">
+            
+            <Button 
+                android:id="@+id/btn_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp40"
+                android:paddingLeft="@dimen/dp20"
+                android:paddingRight="@dimen/dp20"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_selector"
+                android:text="确定"
+                android:textColor="@color/white"/>
+            
+            <Button 
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp40"
+                android:layout_centerVertical="true"
+                android:paddingLeft="@dimen/dp20"
+                android:paddingRight="@dimen/dp20"
+                android:background="@drawable/btn_selector"
+                android:layout_toRightOf="@+id/btn_ok"
+                android:layout_marginLeft="@dimen/dp50"
+                android:text="取消"
+                android:textColor="@color/red"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

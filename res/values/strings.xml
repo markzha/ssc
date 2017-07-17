@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">张颜</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+     <string name="app_title">北京南凯自动化终端</string>
+    <string name="tv_title">注意事项：</string>
+    <string name="conn">连接</string>
+    <string name="tv_localAddress">本机IP地址</string>
+    <string name="back">返回</string>
+    <string name="tv_filelist_title">录波文件列表</string>
+    <string name="tv_filedetail_title">录波文件子项列表</string>
+    <string name="tv_help">您好，欢迎您向开发人员反馈产品的使用意见和建议。</string>
+
+</resources>

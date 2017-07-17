@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 基础数据列表中的项 -->
+<LinearLayout
+    android:id="@+id/new_build_resize_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/ll_selector"
+        android:orientation="horizontal">
+        
+        <View style="@style/devideline_o"/>
+        
+        <TextView 
+            android:id="@+id/tv_expect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="期号"/>
+        
+        <View style="@style/devideline_o"/>
+        
+        <TextView 
+            android:id="@+id/tv_openCode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="开奖号码"
+            android:textColor="@color/blue"/>
+        
+        <View style="@style/devideline_o"/>
+        
+        <TextView 
+            android:id="@+id/tv_openTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="开奖时间"
+            android:textColor="@color/blue"/>
+        
+        <View style="@style/devideline_o"/>
+        
+    </LinearLayout>
+
+</LinearLayout>

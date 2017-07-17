@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ll_bg_black_red"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="5dp"
+        android:background="@drawable/ll_bg_black_divide"
+        android:orientation="vertical"
+        android:padding="0.5dp" >
+
+        <com.zhangyan.myssc.view.CustomerScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="13"
+            android:background="@color/white" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/tv_showTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:text="显示时间" />
+
+                    <Button
+                        android:id="@+id/btn_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp5"
+                        android:background="@drawable/btn_set_selector"
+                        android:padding="@dimen/dp10"
+                        android:text="主页"
+                        android:textColor="@color/blue" />
+                </RelativeLayout>
+
+                <!-- 遥测块 -->
+
+                <include layout="@layout/include_banbiao_detail_yaoce" />
+
+                <!-- 遥信块 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="4"
+                    android:background="@drawable/ll_bg_bb_detail"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="15dp" >
+
+                    <ListView
+                        android:id="@+id/ll_yaoxin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+                    </ListView>
+                </LinearLayout>
+
+                <!-- 遥控块 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="4"
+                    android:background="@drawable/ll_bg_bb_detail"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="15dp" >
+
+                    <ListView
+                        android:id="@+id/ll_yaokong"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+                    </ListView>
+                </LinearLayout>
+            </LinearLayout>
+        </com.zhangyan.myssc.view.CustomerScrollView>
+
+        <View style="@style/devideline_h" />
+
+        <!-- 底部的状态栏 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="状态栏" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="版表名"
+                android:textSize="@dimen/dp20" />
+
+            <TextView
+                android:id="@+id/tv_error"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp10"
+                android:gravity="left"
+                android:text="故障信息"
+                android:textColor="@color/red" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
